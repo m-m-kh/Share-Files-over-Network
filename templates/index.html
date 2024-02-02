@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for data in datas%}
+        {% if request.url == request.base_url %}
+            <h3><a href={{request.url}}{{data}}>{{data}}</a></h3>
+        {% else %}
+            <h3><a href={{request.url}}{{data.path}}>{{data.name}}</a></h3>
+        {% endif %}
+    {% endfor %}
+
+</body>
+</html>
