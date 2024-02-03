@@ -6,12 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <h2><a href="{{back}}">back</a></h2>
     {% for data in datas%}
-        {% if request.url == request.base_url %}
-            <h3><a href="{{request.url}}{{data}}">{{data}}</a></h3>
-        {% else %}
-            <h3><a href="{{request.url}}{{data.path}}/">{{data.name}}</a></h3>
-        {% endif %}
+        <h3><a href="{{request.url}}{{data}}/">{{data}}</a></h3>
     {% endfor %}
 
 </body>
